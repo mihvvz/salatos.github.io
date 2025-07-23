@@ -1,0 +1,79 @@
+body::before {
+      content: "Salatos";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: 60px;
+      color: rgba(0, 0, 0, 0.1); /* Preto com 30% de opacidade */
+      z-index: -1;
+      pointer-events: none;
+    }
+ body {
+      background-color: red;
+      color: white; /* Deixa o texto visível no fundo vermelho */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: gold;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.info h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.info p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: white;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.item {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
