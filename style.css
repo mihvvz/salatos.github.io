@@ -1,27 +1,32 @@
+/* Marca d’água no fundo */
 body::before {
-      content: "Salatos";
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-30deg);
-      font-size: 60px;
-      color: rgba(0, 0, 0, 0.1); /* Preto com 30% de opacidade */
-      z-index: -1;
-      pointer-events: none;
-    }
- body {
-      background-color: red;
-      color: white; /* Deixa o texto visível no fundo vermelho */
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  content: "Salatos";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  pointer-events: none;
+}
 
+/* Corpo da página */
+body {
+  background-color: #111; /* Preto quase puro */
+  color: #f5f5f5; /* Branco suave para leitura */
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Cabeçalho */
 .cabecalho {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px;
-  background-color: gold;
-  border-bottom: 1px solid #ccc;
+  background-color: #000;
+  border-bottom: 2px solid #444;
   flex-wrap: wrap;
 }
 
@@ -30,50 +35,65 @@ body::before {
   height: auto;
   border-radius: 8px;
   margin-right: 20px;
+  border: 2px solid #fff;
 }
 
 .info h2 {
   margin: 0;
-  font-size: 22px;
-  color: #333;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
 }
 
 .info p {
   margin: 4px 0;
-  color: #555;
+  color: #ccc;
   font-size: 14px;
 }
 
+/* Títulos principais */
 h1 {
   text-align: center;
-  margin: 20px 0;
-  color: white;
+  margin: 30px 0;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+/* Galeria de produtos */
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
 }
 
 .item {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ddd;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border: 1px solid #333;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255,255,255,0.1);
 }
 
 .item img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 1px solid #444;
 }
 
 .item p {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 14px;
-  color: #555;
+  color: #ddd;
+  line-height: 1.5;
 }
